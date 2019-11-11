@@ -1,0 +1,184 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(../dist/assets/fonts/Roboto-Regular.ttf)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none
+}
+
+.wrapper {
+    background-color: #c5c5c5;
+    height: 100vh
+}
+
+.content {
+    width: 1440px;
+    margin: 0 auto;
+    background-color: white;
+    font-family: "Roboto";
+    color: #7e7e7e
+}
+
+.table {
+    width: 228px;
+    height: 270px;
+    border: 1px solid #c5c5c5;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.75)
+}
+
+.table .input-color {
+    display: none
+}
+
+.table .label-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 2px 25px 2px 15px
+}
+
+.table__item {
+    display: flex;
+    font-size: 16px;
+    padding: 15px 0;
+    cursor: pointer
+}
+
+.table__item_line {
+    border-bottom: 1px solid #c5c5c5
+}
+
+.table__item_no-use {
+    opacity: 0.3
+}
+
+.table__item img {
+    margin: 0 25px 0 15px
+}
+
+.table__item_rnd {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 2px 25px 2px 15px
+}
+
+.table__item_rnd_red {
+    background-color: red
+}
+
+.table__item_rnd_blue {
+    background-color: blue
+}
+
+.table__item:hover {
+    background-color: #c5c5c5
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0px 3px 10px -1px rgba(0, 0, 0, 0.75)
+}
+
+header .nav {
+    display: flex
+}
+
+header .nav__list {
+    margin-left: 7px;
+    cursor: pointer
+}
+
+header .nav__list:hover {
+    opacity: 0.6
+}
+
+header .nav__title {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 7px 0 0 25px
+}
+
+header .menu {
+    margin-right: 10px;
+    cursor: pointer
+}
+
+header .menu:hover {
+    opacity: 0.6
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%
+}
+
+main .pallete {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+main canvas {
+    margin: 70px 0 100px 0;
+    width: 512px;
+    height: 512px;
+    border: 1px solid #c5c5c5;
+    image-rendering: pixelated
+}
+
+main .table-choose-list {
+    margin-top: 20px
+}
+
+main .table-choose-list h2 {
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 15px;
+    text-align: center
+}
+
+main .table-choose-list__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+main .table-choose-list .highlight {
+    background-color: #7e7e7e;
+    color: white
+}
+
+main .table-choose-list .clear-icon {
+    width: 25px;
+    height: 25px;
+    opacity: 0.8
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 10px
+}
+
+.cursorPensil {
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAEhQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAq4SsmwAAABh0Uk5TeYFoTjwiAIpwZ0UIVk1fKzR4GhEzCYIZar4o7QAAAH9JREFUeJxtztsSgjAQA9C04KYWRLRF//9P7QVpV8zjmUwmgLHDeBEVGLqro9doMYnMWnFb5D6DSrFCPGkeveJJm3rL1O+WXorvFfJHE54140kL/mrFrw5kaLgrGbe14a5xywsHFs1Gjg2TVuOrQ3lXI3qUWC0oLLsIojGpS0c/+PoLV/ZozqkAAAAASUVORK5CYII=), auto
+}
+
+.cursorPaintBucket {
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGPSURBVHgB7ZQvTwNBEMUH2iZFIEBUFFkBSQUkIEGeaYJCIDC49gvA58CQQAKWBL5CTRMQFRhEBSQgEIcgoQREcfCGnc1Npne529N9ya/d+/fe7O7cEc2UowqFKQI9Gb+Ya01wBL7AW5mASGC1TEhTgutgGQxDA7T5BNRUyI8y/wCXcq5wwDboyDgGJ2BRquaQDWV+Dsb64byATbCnzM+kuhFYkpCqzOrUmrPmc8z3U8xJzFvq3gWwlWZSKWnek39eFt7oBk1vfGZAGxxkmLMOyS2NX/MhJcs1FZIW0JGKWBfg01z/BXPgipI1H5kQLuw9K4AvrJNrxTV5WM+AX6IHc85XvUquwxoys/9K0sSVdMltHhtNqJj4/rqMj/mnam7w3XFPbn275qGiiv3AtukO2BXDWEKKVq916wd6D7h67p6a8Ai+wRMle1JEfXDnD/QMIjXmz4NflpCZ9AVKC2ibm/WbySE3FGhuA+x3xB5zu15TgDlL78EruT5mDUh905X4HXgGK+T6fSzGA5qprP4AdClaMsCc6rgAAAAASUVORK5CYII=), auto
+}
+
+.cursorChooseColor {
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFJSURBVHgB3ZahTwMxFMa/cZCAQGAQMyRMIEAiEFgsEoHB8i/xD5CAxCAwJCiSmYmZibNzm5jYxMTel/ZtTXe9a2+3ZNmXfLn20rtfX/v67oB91Jn4xV4bVctpv4ovbbsvnloPxV1soMxpj8S3tn0ubosvxNf2Xo4GIGNxB8XL1dkElHl9Llc7MLY26ABperBOkh/Jsfim4pnkiHzI0HtRSLn1k/gRJhtnsRB9QRnox5oAZuMJTPRBUIbwTItAPkBFELOyhwRIESgEUL2LJ0iEuKC8AkAdwizZmlqIVxlAxfLz6d+sikTFDLqLGMeDzL3p14E8i48ix2rFWJ6j2BP/BlORY3XvdmIjYdYMYKrzB8xsT0vGM+o/8TwFoiBuLKs1z8NVCYifjV/tpEBczStAX1iVqNoQF0SIbjb37Vv8jy2I1bvxf4Pd0wIpXDyIPy2XVgAAAABJRU5ErkJggg==), auto
+}
